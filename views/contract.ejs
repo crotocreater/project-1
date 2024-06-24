@@ -1,0 +1,27 @@
+    <div class="container contract">
+    <h1>
+        Interested? Let's talk
+    </h1>
+    <div class="bottonSubmit">
+        <button class="buttonC tab-button" id="Contract" onclick="openTab(event, 'Tab1')">Contract Form</button>        
+        <button class="buttonC tab-button" id="Maps" onclick="openTab(event, 'Tab2')" >Maps</button>
+    </div>
+    <% if(checkContract) {%>
+    <form action="/submitContract" method="post" id="Tab1" class="tab-content">
+        <div class="form">
+                <input name="name" type="text" class="feedback-input" placeholder="Name" />
+                <input name="email" type="text" class="feedback-input" placeholder="Email" />
+                <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+                <input type="submit" value="Send message" />
+        </div>
+    </form>
+    </div>
+    <% }else{ %>
+    <div class="container contract tab-content" id="Tab2">   
+        <div class="form">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14851.007894430448!2d105.16098424999998!3d21.47824645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134991c05af71b1%3A0x774bb6777e37d4a1!2zTmjDoCBtw6F5IHhpIG3Eg25nIFPDtG5nIFRoYW8!5e0!3m2!1svi!2s!4v1718462875091!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        </div>
+    </div>  
+    <% } %>
+    <script src="js/script.js"></script>
